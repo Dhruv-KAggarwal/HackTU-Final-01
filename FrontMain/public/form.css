@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montez&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    cursor: url('images/fav.png'), auto;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    margin-top: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #002648;
+    opacity: 0.9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    /* z-index: 1; */
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo span {
+    font-size: 60px;
+    font-family: "Montez", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links {
+    display: flex;
+    width: 50vw;
+    justify-content: end;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#signin-btn, #register-btn {
+    width: 60px;
+    height: 27px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+#register-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.toggler {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.toggler div {
+    background-color: white;
+    width: 30px;
+    height: 4px;
+    margin: 4px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background-color: #0a1526;
+        width: 200px;
+        border-radius: 8px;
+        padding: 10px;
+        z-index: 2;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .toggler {
+        display: flex;
+        margin-left: auto;
+    }
+}
+
+
+.form-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 45px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #000, #072844 100%, #072844);
+}
+
+
+.form-container form {
+    color: #fff;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+    padding-left: 30px;
+    background: linear-gradient(to right, #062642, #000);
+    border-radius: 30px;
+
+}
+
+form label {
+    font-size: 17px;
+}
+
+#max-file-size {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #acb0b4;
+}
+
+#name {
+    margin-top: 10px;
+}
+
+#email {
+    margin-top: 30px;
+}
+
+#name-input,
+#email-input,
+#seq-input {
+    width: 300px;
+    height: 35px;
+    padding-left: 10px;
+    border: 2px solid #00DDFF;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to left, #000, #072844);
+}
+
+#name {
+    margin-top: 20px;
+}
+
+/* From Uiverse.io by akshat-patel28 */ 
+.input-div {
+    margin-top: 20px;
+    position: relative;
+    width: 60px;
+    height: 75px;
+    border-radius: 50%;
+    border: 2px solid rgb(1, 235, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    animation: flicker 2s linear infinite;
+  }
+
+  .icon {
+    color: rgb(1, 235, 252);
+    font-size: 1.5rem;
+    cursor: pointer;
+    animation: iconflicker 2s linear infinite;
+  }
+  
+  .input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer !important;
+  }
+  
+  @keyframes flicker {
+    0% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    }
+  
+    5% {
+      border: none;
+      box-shadow: none;
+    }
+  
+    10% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    }
+  
+    25% {
+      border: none;
+      box-shadow: none;
+    }
+  
+    30% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    }
+  
+    100% {
+      border: 2px solid rgb(1, 235, 252);
+      box-shadow: 0px 0px 100px rgb(1, 235, 252) , inset 0px 0px 10px rgb(1, 235, 252),0px 0px 5px rgb(255, 255, 255);
+    }
+  }
+  
+  @keyframes iconflicker {
+    0% {
+      opacity: 1;
+    }
+  
+    5% {
+      opacity: 0.2;
+    }
+  
+    10% {
+      opacity: 1;
+    }
+  
+    25% {
+      opacity: 0.2;
+    }
+  
+    30% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+.agree-check {
+    color: #fff;
+}
+
+.checkbox-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 17px;
+    width: 185px;
+    background: linear-gradient(to right, #000, #072844);
+    margin-top: 7px;
+}
+
+#checkbox {
+    margin-right: 5px;
+}
+
+#agree-check {
+    font-size: 10px;
+}
+
+#submit-btn {
+    margin-top: 20px;
+    height: 30px;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    background-color: #00DDFF;
+    cursor: pointer;
+    width: 80px;
+}

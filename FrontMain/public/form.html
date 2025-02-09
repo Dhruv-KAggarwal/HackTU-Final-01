@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images/fav.png">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+    <title>Form - GeneticX</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/fav.png" alt="Logo" class="logo-img" /></a>
+                <span>GeneticX</span>
+            </div>
+            <div class="nav-links-container">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services-container">Services</a></li>
+                    <li><a href="index.html#meetOurTeam">Team</a></li>
+                    <li><a href="index.html#questions-container">FAQs</a></li>
+                    <li><a href="#"><button id="register-btn">Register</button></a></li>
+                </ul>
+            </div>
+
+            <div class="toggler" id="toggler">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="form-container">
+            <form action="">
+                <label for="">Upload your DNA Sequence (in .fasta format)</label>
+                <label id="max-file-size">Maximum File Size: 50KB</label>
+                
+                <div class="input-div">
+                    <input class="input" name="file" type="file" id="file-input" accept=".fasta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" stroke-linejoin="round" stroke-linecap="round" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke="currentColor" class="icon"><polyline points="16 16 12 12 8 16"></polyline><line y2="21" x2="12" y1="12" x1="12"></line><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path><polyline points="16 16 12 12 8 16"></polyline></svg>
+                </div>
+
+                <label id="name">Add your DNA Sequence here</label>
+                <input type="text" placeholder="Enter your DNA sequence here" id="seq-input">
+
+                <label id="name">Name</label>
+                <input type="text" placeholder="Enter your name here" required id="name-input">
+
+                <label id="email">Email</label>
+                <input type="email" placeholder="Enter your email here" required id="email-input">
+
+                <div class="checkbox-container">
+                <input type="checkbox" required id="checkbox">
+                <label for="" id="agree-check">I agree to share my data for analysis.</label>
+                </div>
+
+                <button id="submit-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <script src="form.js"></script>
+</body>
+</html>
