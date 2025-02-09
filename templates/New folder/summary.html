@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>summary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #00DDFF;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Analysis Summary</h1>
+    </header>
+
+    <main>
+        <table border="1 ">
+            <tr>
+                <th>Features</th>
+                <th>Signification</th>
+            </tr>
+            <tr>
+                <td>Mutation Type</td>
+                <td>The type of genetic alteration present in the sequence, such as deletions, insertions, or substitutions.</td>
+            </tr>
+            <tr>
+                <td>Ancestral origin</td>
+                <td>Indicates the geographical origin of the genetic variation. This helps in tracing human ancestry and understanding genetic diversity.</td>
+            </tr>
+            <tr>
+                <td>Liklihood of Mutation</td>
+                <td>A probability score (on a scale from 0 to 1) estimating how likely a mutation is to occur in this gene.</td>
+            </tr>
+            <tr>
+                <td>Genetic Condition</td>
+                <td>The disease or disorder associated with the mutation. Ex- Huntington's Disease, a neurodegenerative disorder</td>
+            </tr>
+            <tr>
+                <td>Inheritance type</td>
+                <td>Describes how the mutation is passed down from parents. It can be either Dominant or Recessive.</td>
+            </tr>
+            <tr>
+                <td>Pathogenic score</td>
+                <td>A numerical score indicating how harmful or disease-causing the mutation is. A higher score suggests a greater risk.</td>
+            </tr>
+            <tr>
+                <td>GC Content</td>
+                <td>The percentage of guanine (G) and cytosine (C) bases in the DNA sequence. A higher GC content generally makes DNA more stable and affects gene expression.</td>
+            </tr>
+            <tr>
+                <td>Evolutionary Clade</td>
+                <td>Indicates the broader classification in evolutionary terms. Ex - "Reptile" suggests an ancestral link in evolutionary history.</td>
+            </tr>
+            <tr>
+                <td>Protein synthesis effect</td>
+                <td>Specifies whether the mutation affects protein production.</td>
+            </tr>
+        </table>
+    </main>
+
+</body>
+</html>

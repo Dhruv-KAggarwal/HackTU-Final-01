@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report</title>
+    <style>
+        body {
+    background-color: #0a1526;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 200px;
+}
+
+main {
+    background-color: #1e2a38;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+}
+
+.report-container {
+    text-align: left;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    color: #d1d1d1;
+}
+
+pre {
+    background-color: #2a3b4c;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    color: #ffffff;
+}
+
+h2, h3 {
+    margin-top: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #2a3b4c;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="report-container">
+            <h1>Medical Report</h1>
+            <h2>Detailed Analysis</h2>
+            <p><strong>Predicted Mutation Type:</strong> {{ result['Predicted_Mutation_Type'] }}</p>
+            <h3>Additional Features</h3>
+            <ul>
+                {% for feature, value in result.items() %}
+                    {% if feature not in ['Predicted_Mutation_Type', 'Formatted_Sequence'] %}
+                        <li><strong>{{ feature }}:</strong> {{ value }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

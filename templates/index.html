@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Mutation Prediction</title>
+    <link rel="icon" type="image/jpg" href="logogeneticX.png">
+    <link rel="stylesheet" href="form.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montez&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            cursor: url('images/fav.png'), auto;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+        }
+
+        nav {
+            margin-top: 0;
+            width: 100vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: transparent;
+            opacity: 0.9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 0;
+            /* z-index: 1; */
+            color: white;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo span {
+            font-size: 60px;
+            font-family: "Montez", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .nav-links {
+            display: flex;
+            width: 50vw;
+            justify-content: end;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links li a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        #signin-btn, #register-btn {
+            width: 60px;
+            height: 27px;
+            border-radius: 5px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        #register-btn {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+
+        .toggler {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .toggler div {
+            background-color: white;
+            width: 30px;
+            height: 4px;
+            margin: 4px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background-color: #0a1526;
+                width: 200px;
+                border-radius: 8px;
+                padding: 10px;
+                z-index: 2;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .toggler {
+                display: flex;
+                margin-left: auto;
+            }
+        }
+
+        .form-container {
+            height: 100vh;
+            width: 100vw;
+            padding: 45px 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(to top, #000, #072844 100%, #072844);
+         
+        }
+
+        .form-container h1 {
+            font-size: 25px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .form-container form {
+            color: #fff;
+            height: 450px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 0;
+            padding-left: 30px;
+            background: linear-gradient(to right, #062642, #000);
+            box-shadow: 0 0 35px #072844 ;
+            border-radius: 30px;
+        }
+
+        form label {
+            font-size: 17px;
+        }
+
+        #max-file-size {
+            font-size: 12px;
+            margin-top: 5px;
+            color: #acb0b4;
+        }
+
+        #seq-input {
+            width: 300px;
+            height: 35px;
+            padding-left: 10px;
+            border: 2px solid #00DDFF;
+            border-radius: 5px;
+            outline: none;
+            color: #fff;
+            background: linear-gradient(to left, #000, #072844);
+        }
+
+
+        input[type="text"], input[type="file"] {
+        background:transparent;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        padding: 10px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+        button {
+            width: 150px;
+            height: 40px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #0a1526, #072844);
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            outline: none;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="logogeneticX.png" alt="Logo" class="logo-img" /></a>
+                <span>GeneticX</span>
+            </div>
+            <div class="nav-links-container">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services-container">Services</a></li>
+                    <li><a href="index.html#meetOurTeam">Team</a></li>
+                    <li><a href="index.html#questions-container">FAQs</a></li>
+                    <li><a href="#"><button id="register-btn">Register</button></a></li>
+                </ul>
+            </div>
+            <div class="toggler" id="toggler">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header> -->
+
+    <main>
+        <section class="form-container">
+            <h1>DNA Mutation Prediction</h1>
+            <form id="prediction-form" method="POST" action="/predict" enctype="multipart/form-data">
+                <label for="sequence">DNA Sequence (optional if uploading a FASTA file):</label>
+                <input type="text" name="sequence_input" id="sequence" placeholder="e.g. ATGCATGC" />
+                <br><br>
+                <label for="fasta_file">Upload FASTA File:</label>
+                <input type="file" name="fasta_file" id="fasta_file" accept=".fasta">
+                <br><br>
+                <button type="submit">Predict</button>
+            </form>
+            <div id="result-buttons" style="display: none;">
+                <button id="download-pdf">Download PDF</button>
+                <button id="detailed-analysis">Detailed Analysis</button>
+            </div>
+            <br>
+            <p><a style="font-size: large; color: #00DDFF; text-decoration: none;" href="summary">Explanation</a></p>
+        </section>
+        {% if result %}
+        <div>
+            <h2>Prediction Result</h2>
+            <p>Predicted Mutation Type: {{ result.Predicted_Mutation_Type }}</p>
+            <p>Formatted Sequence: {{ result.Formatted_Sequence }}</p>
+            <h3>Additional Features:</h3>
+            <ul>
+                {% for feature, value in result.items() %}
+                    {% if feature not in ['Predicted_Mutation_Type', 'Formatted_Sequence', 'Chemical', 'Reaction', 'Avoid'] %}
+                        <li>{{ feature }}: {{ value }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <h3>Chemical Reactivity Information:</h3>
+            <p>Chemical: {{ result.Chemical }}</p>
+            <p>Reaction: {{ result.Reaction }}</p>
+            <p>Avoid: {{ result.Avoid }}</p>
+        </div>
+        {% endif %}
+    </main>
+  
+    <script src="form.js"></script>
+    <script>
+        document.getElementById('prediction-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            fetch('/predict', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('result-buttons').style.display = 'block';
+                    document.getElementById('download-pdf').setAttribute('data-pdf-path', data.pdf_file_path);
+                } else {
+                    alert(data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+
+        document.getElementById('download-pdf').addEventListener('click', function() {
+            const pdfPath = this.getAttribute('data-pdf-path');
+            window.location.href = `/download?pdf=${pdfPath}`;
+        });
+
+        document.getElementById('detailed-analysis').addEventListener('click', function() {
+            window.location.href = '/detailed_analysis';
+        });
+    </script>
+</body>
+</html>
