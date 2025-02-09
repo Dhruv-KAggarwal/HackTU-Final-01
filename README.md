@@ -19,6 +19,13 @@ Installation & Setup Guide
 (https://drive.google.com/file/d/1IbqP9IRfkujZH4xdkH5LNBghQixfljNA/view?usp=sharing)
 
 
+
+DEMO VIDEO of our model
+
+https://youtu.be/Tz4YD4-1Mb0
+
+
+
 2. Save the downloaded file in **two locations**:  
    - `main1/`  
    - `saved_model/`  
