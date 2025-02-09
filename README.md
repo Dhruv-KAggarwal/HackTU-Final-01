@@ -1,16 +1,18 @@
 Here’s a README file formatted for direct copy-pasting:  
 
 ```md
-# **HackTU-Final-01**
+ **HackTU-Final-01
 
-## **Project Overview**
+Project Overview
 This project implements a machine learning model with a frontend and backend. Follow the steps below to set up and run the project successfully.
 
 ---
 
-## **Installation & Setup Guide**
+Installation & Setup Guide
 
-### **1. Download & Save the Model**
+
+1. Download & Save the Model
+
 1. Download the model file from the link:  
    [HackTU-Final-01 Model]
 
@@ -23,7 +25,7 @@ This project implements a machine learning model with a frontend and backend. Fo
 
 ---
 
-### **2. Setting Up the Frontend**
+2. Setting Up the Frontend
 1. Navigate to the `FrontMain` folder:  
    ```sh
    cd FrontMain
@@ -39,7 +41,9 @@ This project implements a machine learning model with a frontend and backend. Fo
 
 ---
 
-### **3. Setting Up the Backend**
+3. Setting Up the Backend
+
+
 1. Install Python dependencies in a virtual environment:  
    ```sh
    python -m venv env  
@@ -55,12 +59,12 @@ This project implements a machine learning model with a frontend and backend. Fo
 
 ---
 
-### **4. Running the Project**
+4. Running the Project
 Once both the frontend and backend are running, your project will be live and ready for use.
 
 ---
 
-## **Folder Structure**
+Folder Structure
 ```
 HackTU-Final-01/
 │── main1/
